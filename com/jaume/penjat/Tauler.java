@@ -1,13 +1,14 @@
 package com.jaume.penjat;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Tauler {
     public char[] paraulaSecreta;
     public int intents;
     public int vidas = 4;
-
+    public String[] palabraEndevinada;
     public void inicialitzarPartida(String palabra, int numIntentos) {
         this.paraulaSecreta = palabra.toCharArray();
         setIntents(numIntentos);
