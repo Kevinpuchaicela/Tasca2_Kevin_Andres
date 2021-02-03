@@ -4,23 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tauler {
-    public List<Character> chars = new ArrayList<>();
+    public char[] paraulaSecreta;
     public int intents;
-    public int vidas;
+    public int vidas = 4;
 
     public void inicialitzarPartida(String palabra, int numIntentos) {
-        for (char character : palabra.toCharArray()) {
-            chars.add(character);
-        }
+        this.paraulaSecreta = palabra.toCharArray();
         setIntents(numIntentos);
     }
 
-    public List<Character> getChars() {
-        return chars;
+    public char[] getParaulaSecreta() {
+        return paraulaSecreta;
     }
 
-    public void setChars(List<Character> chars) {
-        this.chars = chars;
+    public void setParaulaSecreta(char[] paraulaSecreta) {
+        this.paraulaSecreta = paraulaSecreta;
     }
 
     public int getIntents() {
