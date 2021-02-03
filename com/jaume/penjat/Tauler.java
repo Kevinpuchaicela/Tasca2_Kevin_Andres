@@ -8,6 +8,13 @@ public class Tauler {
     public int intents;
     public int vidas;
 
+    public void inicialitzarPartida(String palabra, int numIntentos) {
+        for (char character : palabra.toCharArray()) {
+            chars.add(character);
+        }
+        setIntents(numIntentos);
+    }
+
     public List<Character> getChars() {
         return chars;
     }
