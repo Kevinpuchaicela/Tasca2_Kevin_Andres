@@ -5,10 +5,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Tauler {
-    public char[] paraulaSecreta;
-    public int intents;
-    public int vidas;
-    public String[] palabraEndevinada;
+    private char[] paraulaSecreta;
+    private int intents;
+    private int vidas;
+    private String[] palabraEndevinada;
+    private boolean guanyador = false;
 
     public void inicialitzarPartida(String palabra, int numIntentos) {
         setParaulaSecreta(palabra.toCharArray());
