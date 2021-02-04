@@ -18,6 +18,32 @@ public class Tauler {
         setPalabraEndevinada(new String[getParaulaSecreta().length]);
     }
 
+    public String verificar(String entrada) {
+        if (entrada.length() > 2) {
+            char[] arrayEntrada = entrada.toCharArray();
+            if (Arrays.equals(arrayEntrada, paraulaSecreta)) {
+                this.guanyador = true; //crear setter de guanyador?
+                return "Paraula correcte";
+            }
+            this.intents = intents - 1;
+            return "Paraula incorrecte";
+        }
+
+        boolean coincidencia = false;
+
+        for (int i = 0; i < paraulaSecreta.length; i++) {
+            if (entrada.charAt(0) == (paraulaSecreta[i])) {
+                this.palabraEndevinada[i] = entrada;
+                coincidencia = true; //sug: se podria hacer que imprima el nº de coincidencias encontradas (arr)
+            }
+        }
+        if (coincidencia == true) {
+            return "Lletra correcte";
+        }
+        this.intents = intents - 1;
+        return "Lletra incorrecte";
+    }
+
     public char[] getParaulaSecreta() {
         return paraulaSecreta;
     }
