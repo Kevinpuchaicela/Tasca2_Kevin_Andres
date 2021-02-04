@@ -11,8 +11,9 @@ public class Tauler {
     public String[] palabraEndevinada;
 
     public void inicialitzarPartida(String palabra, int numIntentos) {
-        this.paraulaSecreta = palabra.toCharArray();
+        setParaulaSecreta(palabra.toCharArray());
         setIntents(numIntentos);
+        setVidas(numIntentos);
     }
 
     public char[] getParaulaSecreta() {
