@@ -19,7 +19,7 @@ public class Tauler {
     }
 
     public String verificar(String entrada) {
-        if (entrada.length() > 2) {
+        if (entrada.length() >= 2) {
             char[] arrayEntrada = entrada.toCharArray();
             if (Arrays.equals(arrayEntrada, paraulaSecreta)) {
                 this.guanyador = true; //crear setter de guanyador?
