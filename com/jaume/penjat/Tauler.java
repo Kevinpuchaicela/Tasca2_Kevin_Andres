@@ -7,12 +7,14 @@ import java.util.List;
 public class Tauler {
     private char[] paraulaSecreta;
     private int intents;
+    private int totalIntents;
     private String[] palabraEndevinada;
     private boolean guanyador = false;
 
     public void inicialitzarPartida(String palabra, int numIntentos) {
         setParaulaSecreta(palabra.toCharArray());
         setIntents(numIntentos);
+        setTotalIntents(numIntentos);
         setPalabraEndevinada(new String[getParaulaSecreta().length]);
     }
 
@@ -45,6 +47,13 @@ public class Tauler {
         return "Lletra incorrecte";
     }
 
+    public String imprimirVides() {
+        if (intents >= 1) {
+            return "Et queden " + intents + " vides de " + getTotalIntents();
+        }
+        return "Et queda 1 vida de " + getTotalIntents();
+    }
+
     public char[] getParaulaSecreta() {
         return paraulaSecreta;
     }
@@ -67,5 +76,13 @@ public class Tauler {
 
     public void setPalabraEndevinada(String[] palabraEndevinada) {
         this.palabraEndevinada = palabraEndevinada;
+    }
+
+    public int getTotalIntents() {
+        return totalIntents;
+    }
+
+    public void setTotalIntents(int totalIntents) {
+        this.totalIntents = totalIntents;
     }
 }
