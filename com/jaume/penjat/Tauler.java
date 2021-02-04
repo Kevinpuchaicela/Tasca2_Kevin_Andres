@@ -7,8 +7,9 @@ import java.util.List;
 public class Tauler {
     public char[] paraulaSecreta;
     public int intents;
-    public int vidas = 4;
+    public int vidas;
     public String[] palabraEndevinada;
+
     public void inicialitzarPartida(String palabra, int numIntentos) {
         this.paraulaSecreta = palabra.toCharArray();
         setIntents(numIntentos);
@@ -38,5 +39,11 @@ public class Tauler {
         this.vidas = vidas;
     }
 
+    public String[] getPalabraEndevinada() {
+        return palabraEndevinada;
+    }
 
+    public void setPalabraEndevinada(String[] palabraEndevinada) {
+        this.palabraEndevinada = palabraEndevinada;
+    }
 }
