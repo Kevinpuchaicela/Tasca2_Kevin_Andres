@@ -36,6 +36,9 @@ public class Tauler {
             }
         }
         if (coincidencia == true) {
+            if (palabraEndevinada.toString().equals(paraulaSecreta.toString())) {
+                this.guanyador = true;
+            }
             return "Lletra correcte";
         }
         this.intents = intents - 1;
