@@ -14,6 +14,7 @@ public class Tauler {
         setParaulaSecreta(palabra.toCharArray());
         setIntents(numIntentos);
         setVidas(numIntentos);
+        setPalabraEndevinada(new String[getParaulaSecreta().length]);
     }
 
     public char[] getParaulaSecreta() {
