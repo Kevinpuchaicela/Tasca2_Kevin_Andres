@@ -75,6 +75,10 @@ public class Tauler {
         return salida;
     }
 
+    public boolean hasGuanyat() {
+        return guanyador;
+    }
+
     public char[] getParaulaSecreta() {
         return paraulaSecreta;
     }
