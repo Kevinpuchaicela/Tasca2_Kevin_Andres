@@ -16,6 +16,12 @@ public class Tauler {
         setIntents(numIntentos);
         setTotalIntents(numIntentos);
         setPalabraEndevinada(new String[getParaulaSecreta().length]);
+        String[] arrPalabra = palabra.split("");
+        for (int i = 0; i < palabra.length(); i++) {
+            if (arrPalabra[i].equals(" ")){
+                this.palabraEndevinada[i] = " ";
+            }
+        }
     }
 
     public String verificar(String entrada) {
