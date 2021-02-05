@@ -64,6 +64,17 @@ public class Tauler {
         return "Et queda 1 vida de " + getTotalIntents();
     }
 
+    public String imprimir() {
+        String salida = "";
+        for (String item : getPalabraEndevinada()) {
+            if (item == null) {
+                item = "_";
+            }
+            salida += item;
+        }
+        return salida;
+    }
+
     public char[] getParaulaSecreta() {
         return paraulaSecreta;
     }
