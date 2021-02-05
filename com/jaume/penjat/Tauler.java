@@ -33,10 +33,10 @@ public class Tauler {
             char[] arrayEntrada = entrada.toCharArray();
             if (Arrays.equals(arrayEntrada, paraulaSecreta)) {
                 this.guanyador = true; //crear setter de guanyador?
-                return "Paraula correcte";
+                return "Lletra correcte";
             }
             this.intents = intents - 1;
-            return "Paraula incorrecte";
+            return "Lletra incorrecte";
         }
 
         boolean coincidencia = false;
