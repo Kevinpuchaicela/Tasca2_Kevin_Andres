@@ -58,7 +58,7 @@ public class Tauler {
     }
 
     public String imprimirVides() {
-        if (intents >= 1) {
+        if (intents > 1) {
             return "Et queden " + intents + " vides de " + getTotalIntents();
         }
         return "Et queda 1 vida de " + getTotalIntents();
